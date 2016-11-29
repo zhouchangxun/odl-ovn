@@ -147,7 +147,7 @@ public class OVSDBManager implements OvsdbConnectionListener {
                         continue;
                     }
 
-                    MonitorRequestBuilder<GenericTableSchema> monitorBuilder = MonitorRequestBuilder.builder(tableSchema);
+                    MonitorRequestBuilder<GenericTableSchema> monitorBuilder = new MonitorRequestBuilder(tableSchema);
                     for (String columnName: monitoredColumns) {
                         monitorBuilder.addColumn(columnName);
                     }

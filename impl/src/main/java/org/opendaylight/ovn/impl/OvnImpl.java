@@ -40,7 +40,7 @@ public class OvnImpl implements OvnService {
 			LOG.error("address resolve exception");
 		}
 
-		ovsdbManager = new OVSDBManager(ovsdbAddr, ovsdbPort);
+		ovsdbManager = new OVSDBManager(ovsdbAddr, 6644);
 		OVSDBBridge brInt = ovsdbManager.getOVSDBBridge("br-int");
 		brInt.ensureExisted();
 		LOG.info("Ensure br-int finished");
