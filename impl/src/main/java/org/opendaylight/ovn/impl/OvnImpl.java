@@ -22,26 +22,28 @@ import org.opendaylight.ovsdb.lib.impl.OvsdbConnectionService;
 import org.opendaylight.ovsdb.lib.OvsdbConnection;
 import org.opendaylight.ovsdb.lib.OvsdbClient;
 import org.opendaylight.ovsdb.lib.OvsdbConnectionInfo;
+import org.opendaylight.ovn.impl.ovsdb.OVSDBBridge;
+import org.opendaylight.ovn.impl.ovsdb.OVSDBManager;
 
 public class OvnImpl implements OvnService {
 	private static final Logger LOG = LoggerFactory.getLogger(OvnImpl.class);
 	public static OvsdbConnection ovsdbService = OvsdbConnectionService.getService();
 	public OvsdbClient ovsdbClient=null;
+	private OVSDBManager ovsdbManager=null;
 
 	public OvnImpl(){
 		LOG.info("OvnService init begin");
-		InetAddress north_db_host=null;
+		InetAddress ovsdbAddr=null;
 		try {
-			north_db_host = InetAddress.getByName("10.157.0.150");
+			ovsdbAddr = InetAddress.getByName("10.157.0.150");
 		}catch(UnknownHostException e){
 			LOG.error("address resolve exception");
 		}
 
-		try {
-		  this.ovsdbClient = ovsdbService.connect(north_db_host, 6644);
-		}catch(Exception e){
-                  LOG.info("ovsdb connect failed");
-                }
+		ovsdbManager = new OVSDBManager(ovsdbAddr, ovsdbPort);
+		OVSDBBridge brInt = ovsdbManager.getOVSDBBridge("br-int");
+		brInt.ensureExisted();
+		LOG.info("Ensure br-int finished");
 		LOG.info("OvnService init finished");
 	}
 	@Override
