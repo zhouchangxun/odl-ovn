@@ -1,4 +1,4 @@
-package com.netease.cns.agent.ovsdb.event;
+package org.opendaylight.ovn.impl.ovsdb.event;
 
 /**
  * Created by hzzhangdongya on 16-6-14.

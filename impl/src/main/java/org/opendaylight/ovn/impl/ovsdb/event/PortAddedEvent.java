@@ -1,4 +1,4 @@
-package com.netease.cns.agent.ovsdb.event;
+package org.opendaylight.ovn.impl.ovsdb.event;
 
 import org.opendaylight.ovsdb.lib.notation.UUID;
 

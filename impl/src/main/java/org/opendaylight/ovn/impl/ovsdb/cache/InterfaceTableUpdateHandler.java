@@ -1,6 +1,6 @@
-package com.netease.cns.agent.ovsdb.cache;
+package org.opendaylight.ovn.impl.ovsdb.cache;
 
-import com.netease.cns.agent.ovsdb.event.InterfaceOFPortAllocatedEvent;
+import org.opendaylight.ovn.impl.ovsdb.event.InterfaceOFPortAllocatedEvent;
 import org.opendaylight.ovsdb.lib.message.TableUpdates;
 import org.opendaylight.ovsdb.lib.notation.UUID;
 import org.opendaylight.ovsdb.lib.schema.DatabaseSchema;

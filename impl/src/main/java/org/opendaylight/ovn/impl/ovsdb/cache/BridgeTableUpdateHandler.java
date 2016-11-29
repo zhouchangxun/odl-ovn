@@ -1,4 +1,4 @@
-package com.netease.cns.agent.ovsdb.cache;
+package org.opendaylight.ovn.impl.ovsdb.cache;
 
 import org.opendaylight.ovsdb.lib.message.TableUpdates;
 import org.opendaylight.ovsdb.lib.notation.UUID;

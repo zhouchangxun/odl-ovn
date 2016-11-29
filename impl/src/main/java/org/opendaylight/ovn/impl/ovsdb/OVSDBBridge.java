@@ -1,9 +1,9 @@
-package com.netease.cns.agent.ovsdb;
+package org.opendaylight.ovn.impl.ovsdb;
 
 import com.google.common.collect.Sets;
 import com.google.common.util.concurrent.ListenableFuture;
-import com.netease.cns.agent.ovsdb.cache.OVSDBCache;
-import com.netease.cns.agent.ovsdb.common.Constants;
+import org.opendaylight.ovn.impl.ovsdb.cache.OVSDBCache;
+import org.opendaylight.ovn.impl.ovsdb.common.Constants;
 import org.opendaylight.ovsdb.lib.OvsdbClient;
 import org.opendaylight.ovsdb.lib.notation.Mutator;
 import org.opendaylight.ovsdb.lib.notation.UUID;

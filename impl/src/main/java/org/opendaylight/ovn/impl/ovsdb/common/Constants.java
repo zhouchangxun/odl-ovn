@@ -1,4 +1,4 @@
-package com.netease.cns.agent.ovsdb.common;
+package org.opendaylight.ovn.impl.ovsdb.common;
 
 /**
  * Created by hzzhangdongya on 16-6-15.
