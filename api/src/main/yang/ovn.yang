@@ -1,0 +1,22 @@
+module ovn {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:ovn";
+    prefix "ovn";
+
+    revision "2015-01-05" {
+        description "Initial revision of ovn model";
+    }
+    rpc hello-world {
+        input {
+            leaf name {
+                type string;
+            }
+        }
+        output {
+            leaf greating {
+                type string;
+            }
+        }
+    }
+
+}
